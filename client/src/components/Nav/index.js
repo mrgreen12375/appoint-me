@@ -16,7 +16,7 @@ function Nav(props) {
 					<span onClick={() => setCurrentTab("appointments")}>Appointments</span>
 				</li>
 				<li>
-					<span onClick={() => setCurrentTab("login")}>Login</span>
+					<span onClick={() => setCurrentTab("login")}>Logout</span>
 				</li>
 			</ul>
 		</nav>
