@@ -1,13 +1,326 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  background-image: url("./assets/images/wrinkeld-paper.jpg");
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+min-height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul a{
+  text-decoration: none;
+}
+
+nav li{
+  display: inline-block;
+  color: black;
+  border-bottom: 3px solid black;
+  padding: 0px 7px 0px;
+  margin-right: 50px;
+}
+
+nav li:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+nav a:link {
+  color: black;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a:visited:hover {
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.launchPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.launchTitle {
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.instructions {
+  font-size: 30px;
+  margin: 0px 250px 0px 250px;
+  padding-bottom: 30px;
+}
+
+.sideBySide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loginCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login {
+  width: 20%;
+  color: black;
+  padding: 0px 30px 0px 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.login h2 {
+  font-size: 38px;
+}
+
+.loginLabel {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.loginInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.signupButton {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 150px 5px 150px;
+  color: white;
+  background-color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.loginButton {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.loginButton:hover {
+  background-color: rgb(45, 45, 255);
+  cursor: pointer;
+}
+
+.logInstead {
+  text-decoration: none;
+  color: blue;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.logInstead:hover {
+  font-size: 20px;
+}
+
+.inspiration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  top: 50px;
+}
+
+.inspiration h2 {
+  font-size: 30px;
+}
+
+.quote {
+  font-size: 30px;
+  margin: 0px 250px 0px 250px;
+  padding-bottom: 30px;
+}
+
+.scheduleForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.scheduleContainer {
+  margin: 10px;
+}
+
+.date {
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 5px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nameLabel {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -10px;
+}
+
+.emailLabel {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -10px;
+}
+
+.nameInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+}
+
+.emailInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+  margin-left: 35px;
+}
+
+.messageLabel {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  bottom: 70px;
+}
+
+.messageInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 70px 50px 10px;
+}
+
+.scheduleButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px 0px;
+  margin: 5px;
+}
+
+.scheduleButton:hover {
+  background-color: rgb(45, 45, 255);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit {
+  position: relative;
+  top: 15px;
+  left: 450px;
+  color: blue;
+  text-decoration: none;
+}
+
+.edit:hover {
+  font-size: 20px;
+}
+
+.appointmentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 250px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0px 15px 15px 0px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+}
+
+.row h3 {
+  padding-right: 10px;
+}
+
+.row p {
+  position: relative;
+  top: 5px;
 }
