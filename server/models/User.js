@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const appointSchema = require("./Appointment");
@@ -39,13 +39,13 @@ userSchema.pre("save", async function (next) {
 });
 
 userSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password)
-}
+  return bcrypt.compare(password, this.password);
+};
 
-userSchema.virtual('appointmentCount').get(function () {
+userSchema.virtual("appointmentCount").get(function () {
   return this.appointments.length;
-})
+});
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
-module.exports = User
+module.exports = User;
