@@ -5,44 +5,22 @@ function Login() {
 
 	return (
     <main>
-        <div className="sideBySide">
-            <div>
-                <h2 className="title">Login</h2>
-                <form className="scheduleForm">
-                    <div className="allignForm">
-                        <div className="scheduleContainer">
-                            <div className="scheduleContainer">
-                                <label className="nameLabel">Username:</label>
-                                <input className="nameInput" type="text" name="nameField" id="name-input"/>
-                            </div>
-                            <div className="scheduleContainer">
-                                <label className="nameLabel">Password:</label>
-                                <input className="nameInput" type="text" name="nameField" id="name-input"/>
-                            </div>
-                            <button className="loginButton">Login</button>
-                        </div>
+        <h2 className="title">Login</h2>
+        <form className="scheduleForm">
+            <div className="allignForm">
+                <div className="scheduleContainer">
+                    <div className="scheduleContainer">
+                        <label className="nameLabel">Username:</label>
+                        <input className="nameInput" type="text" name="nameField" id="name-input"/>
                     </div>
-                </form>
-            </div>
-            <div>
-                <h2 className="title">Login</h2>
-                <form className="scheduleForm">
-                    <div className="allignForm">
-                        <div className="scheduleContainer">
-                            <div className="scheduleContainer">
-                                <label className="nameLabel">Username:</label>
-                                <input className="nameInput" type="text" name="nameField" id="name-input"/>
-                            </div>
-                            <div className="scheduleContainer">
-                                <label className="nameLabel">Password:</label>
-                                <input className="nameInput" type="text" name="nameField" id="name-input"/>
-                            </div>
-                            <button className="loginButton">Sign-up</button>
-                        </div>
+                    <div className="scheduleContainer">
+                        <label className="nameLabel">Password:</label>
+                        <input className="nameInput" type="text" name="nameField" id="name-input"/>
                     </div>
-                </form>
+                    <button className="loginButton">Login</button>
+                </div>
             </div>
-        </div>
+        </form>
     </main>
 	);
 }
