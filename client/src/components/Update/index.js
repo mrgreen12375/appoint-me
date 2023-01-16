@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Update() {
 
@@ -105,8 +106,8 @@ function Update() {
                     <label className="messageLabel">Message:</label>
                     <textarea className="messageInput" type="text" name="messageField" id="message-input"></textarea>
                 </div>
-                <a className="scheduleButton" href='../Appontments'>Update</a>
-                <a className="scheduleButton" href='../Appontments'>Delete</a>
+                <Link className="scheduleButton" to="/appointments">Update</Link>
+                <Link className="scheduleButton" to="/appointments">Delete</Link>
             </div>
         </form>
     </main>

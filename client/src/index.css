@@ -227,10 +227,23 @@ nav a:visited:hover {
   margin-left: -10px;
 }
 
+.emailLabel {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -10px;
+}
+
 .nameInput {
   border: 2px solid black;
   border-radius: 5px;
   padding: 6px 110px 6px 10px;
+}
+
+.emailInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+  margin-left: 35px;
 }
 
 .messageLabel {
@@ -272,6 +285,18 @@ nav a:visited:hover {
   align-items: center;
 }
 
+.edit {
+  position: relative;
+  top: 15px;
+  left: 450px;
+  color: blue;
+  text-decoration: none;
+}
+
+.edit:hover {
+  font-size: 20px;
+}
+
 .appointmentCard {
   display: flex;
   flex-direction: column;
@@ -282,6 +307,7 @@ nav a:visited:hover {
   border-radius: 5px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
+  padding: 0px 15px 15px 0px;
 }
 
 .row {
