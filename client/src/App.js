@@ -6,7 +6,7 @@ import Appointments from "./components/Appointments";
 import Login from "./components/Login";
 
 function App() {
-	const [currentTab, setCurrentTab] = useState("login");
+	const [currentTab, setCurrentTab] = useState("home");
 
 	const renderTab = () => {
 		switch (currentTab) {
