@@ -1,14 +1,13 @@
 import React from "react";
 import Nav from "../Nav";
 
-function Header(props) {
-	const { setCurrentTab } = props;
+function Header() {
 
 	return (
 		<header>
 			<h1>Appoint Me</h1>
 			<div>
-				<Nav setCurrentTab={setCurrentTab}></Nav>
+				<Nav></Nav>
 			</div>
 		</header>
 	);

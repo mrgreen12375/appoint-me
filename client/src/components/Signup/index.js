@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Login() {
+function Signup() {
 
 	return (
     <main>
-        <h2 className="title">Login</h2>
+        <h2 className="title">Sign-up</h2>
         <form className="scheduleForm">
             <div className="allignForm">
                 <div className="scheduleContainer">
@@ -14,12 +14,16 @@ function Login() {
                         <input className="nameInput" type="text" name="nameField" id="name-input"/>
                     </div>
                     <div className="scheduleContainer">
+                        <label className="emailLabel">Email:</label>
+                        <input className="emailInput" type="text" name="nameField" id="name-input"/>
+                    </div>
+                    <div className="scheduleContainer">
                         <label className="nameLabel">Password:</label>
                         <input className="nameInput" type="text" name="nameField" id="name-input"/>
                     </div>
                     <div className="loginForm">
-                    <button className="loginButton">Login</button>
-                    <Link className="logInstead" to="/signup">Sign-up instead</Link>
+                    <button className="loginButton">Sign-up</button>
+                    <Link className="logInstead" to="/login">Login instead</Link>
                     </div>
                 </div>
             </div>
@@ -28,4 +32,4 @@ function Login() {
 	);
 }
 
-export default Login;
+export default Signup;

@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Card() {
 
 	return (
         <div className="center">
             <div className="appointmentCard">
+            <Link className="edit" to="/update">Edit</Link>
                 <div className="row">
                     <h3>Name:</h3>
                     <p>Project 3 Meeting</p>

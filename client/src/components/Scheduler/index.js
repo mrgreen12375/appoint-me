@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Scheduler() {
 
@@ -105,7 +106,7 @@ function Scheduler() {
                     <label className="messageLabel">Message:</label>
                     <textarea className="messageInput" type="text" name="messageField" id="message-input"></textarea>
                 </div>
-                <a className="scheduleButton" href='../Appontments'>Schedule</a>
+                <Link className="scheduleButton" to="/appointments">Schedule</Link>
             </div>
         </form>
     </main>

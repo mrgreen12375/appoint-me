@@ -1,22 +1,22 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function Nav(props) {
-	const { setCurrentTab } = props;
+function Nav() {
 
 	return (
 		<nav>
 			<ul>
-				<li>
-					<span onClick={() => setCurrentTab("home")}>Home</span>
+			<li>
+					<Link to="/">Home</Link>
 				</li>
 				<li>
-					<span onClick={() => setCurrentTab("scheduler")}>Scheduler</span>
+					<Link to="/scheduler">Scheduler</Link>
 				</li>
 				<li>
-					<span onClick={() => setCurrentTab("appointments")}>Appointments</span>
+					<Link to="/appointments">Appointments</Link>
 				</li>
 				<li>
-					<span onClick={() => setCurrentTab("login")}>Logout</span>
+					<Link to="/login">Login</Link>
 				</li>
 			</ul>
 		</nav>

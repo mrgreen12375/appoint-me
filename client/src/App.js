@@ -1,37 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Scheduler from "./components/Scheduler";
 import Appointments from "./components/Appointments";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Update from "./components/Update";
+
 
 function App() {
-	const [currentTab, setCurrentTab] = useState("home");
 
-	const renderTab = () => {
-		switch (currentTab) {
-			case "home":
-				return <Home />;
-			case "scheduler":
-				return <Scheduler />;
-			case "appointments":
-				return <Appointments />;
-			case "login":
-				return <Login />;
-			default:
-				return null;
-		}
-	};
 
 	return (
-		<div>
+		<Router>
 			<div>
-				<Header setCurrentTab={setCurrentTab}></Header>
+				<Header></Header>
 			</div>
 			<div>
-				<main>{renderTab()}</main>
+				<main>
+					<Routes>
+						<Route 
+							path="/" 
+							element={<Home />} 
+						/>
+						<Route 
+							path="/scheduler" 
+							element={<Scheduler />} 
+						/>
+						<Route 
+							path="/appointments" 
+							element={<Appointments />} 
+						/>
+						<Route 
+							path="/login" 
+							element={<Login />} 
+						/>
+												<Route 
+							path="/signup" 
+							element={<Signup />} 
+						/>
+												<Route 
+							path="/update" 
+							element={<Update />} 
+						/>
+				</Routes>
+				</main>
 			</div>
-		</div>
+		</Router>
 	);
 }
 
