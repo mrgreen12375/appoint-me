@@ -47,10 +47,9 @@ const Signup = () => {
                                 <label className="nameLabel">Username:</label>
                                 <input
                                 className="nameInput"
-                                placeholder="Your username"
                                 name="username"
                                 type="text"
-                                value={formState.name}
+                                value={formState.username}
                                 onChange={handleChange}
                                 />
                             </div>
@@ -59,7 +58,6 @@ const Signup = () => {
                                 <label className="nameLabel">Email:</label>
                                 <input
                                 className="nameInput"
-                                placeholder="Your email"
                                 name="email"
                                 type="email"
                                 value={formState.email}
@@ -70,7 +68,6 @@ const Signup = () => {
                                 <label className="nameLabel">Password:</label>
                                 <input
                                 className="nameInput"
-                                placeholder="******"
                                 name="password"
                                 type="password"
                                 value={formState.password}
@@ -78,7 +75,7 @@ const Signup = () => {
                                 />
                             </div>
                             <div className="loginForm">
-                            <button className="loginButton" style={{ cursor: 'pointer' }} type="submit">Login</button>
+                            <button className="loginButton" style={{ cursor: 'pointer' }} type="submit">Sign-up</button>
                             <Link className="logInstead" to="/login">Login instead</Link>
                             </div>
                         </div>
