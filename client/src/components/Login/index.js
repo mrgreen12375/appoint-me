@@ -39,16 +39,6 @@ const Login = (props) => {
 
       });
 
-      Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
-    }
-
-    // clear form values
-    setFormState({
-      email: "",
-      password: "",
-    });
   };
 
   return (
