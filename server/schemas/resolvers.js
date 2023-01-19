@@ -10,21 +10,25 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be signed in!");
     },
+    //Searches for all users
     users: async () => {
       return User.find();
     },
+    //Searches a specific user
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("appointments");
     },
   },
   Mutation: {
+    //addUser tested and working
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
     },
+    //login tested and working
     login: async (parent, { email, password }) => {
-      const user = User.findOne({ email });
+      const user = await User.findOne({ email });
       if (!user) {
         throw new AuthenticationError("User not found");
       }
@@ -32,12 +36,48 @@ const resolvers = {
       if (!correctpw) {
         throw new AuthenticationError("Incorrect password!");
       }
+      const token = signToken(user);
+      return { token, user };
     },
-    removeUser: async () => {},
-    createAppointment: async () => {},
-    updateAppointment: async () => {},
-    deleteAppointment: async () => {},
+    //removeUser tested and working
+    //try to implement jwt here so that remove user only works when logged in
+    removeUser: async (parent, { email, password }) => {
+      const user = User.findOneAndDelete(
+        {
+          email: email,
+        },
+        { password: password }
+      );
+      return user;
+    },
+    createAppointment: async (parent, { input }, context) => {
+      if (context.user) {
+        return await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { appointments: input } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    updateAppointment: async (parent, { appointID }, context) => {
+      if (context.user) {
+        const appt = await User.findOneAndUpdate({
+          _id: context.user._id,
+        });
+      }
+    },
+    deleteAppointment: async (parent, { appointID }, context) => {
+      if (context.user) {
+        const appt = await User.findOneAndUpdate(
+          { _id: context.user.id },
+          { $pull: { appointments: appointID } },
+          { new: true }
+        );
+      }
+    },
   },
 };
 
 module.exports = resolvers;
+//cant figure out how to incorporate context in apollo server sandbox
