@@ -55,7 +55,7 @@ const Login = (props) => {
               <div className="scheduleContainer">
                 <label className="nameLabel">Email:</label>
                 <input
-                  className="nameInput"
+                  className="emailInput"
                   name="email"
                   type="email"
                   value={formState.email}

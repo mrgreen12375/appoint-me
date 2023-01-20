@@ -47,7 +47,7 @@ const Signup = () => {
           <form className="scheduleForm" onSubmit={handleFormSubmit}>
             <div className="allignForm">
               <div className="scheduleContainer">
-                <label className="nameLabel">Username:</label>
+                <label className="userLabel">Username:</label>
                 <input
                   className="nameInput"
                   name="username"
@@ -60,7 +60,7 @@ const Signup = () => {
                 <div className="scheduleContainer">
                   <label className="nameLabel">Email:</label>
                   <input
-                    className="nameInput"
+                    className="emailInput"
                     name="email"
                     type="email"
                     value={formState.email}

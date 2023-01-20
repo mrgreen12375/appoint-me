@@ -227,6 +227,11 @@ nav a:visited:hover {
   margin-left: -10px;
 }
 
+.userLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .emailLabel {
   font-size: 20px;
   font-weight: bold;
