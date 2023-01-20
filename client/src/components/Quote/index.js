@@ -14,8 +14,7 @@ function Quote() {
   }, []);
 
   const getQuoteApiData = async () => {
-    const response = fetch(
-      `https://api.api-ninjas.com/v1/quotes?category=${query}`,
+      fetch(`https://api.api-ninjas.com/v1/quotes?category=${query}`,
       {
         headers: {
           "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
