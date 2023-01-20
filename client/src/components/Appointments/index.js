@@ -5,7 +5,7 @@ function Appointments() {
   return (
     <main>
       <h2 className="title">Appointments</h2>
-      <Card />
+      <Card></Card>
     </main>
   );
 }

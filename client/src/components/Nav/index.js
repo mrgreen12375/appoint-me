@@ -20,7 +20,7 @@ function Nav() {
 					{Auth.loggedIn() ? (<Link to="/appointments">Appointments</Link>) : (<Link to="/login">Appointments</Link>)}
 				</li>
 				<li>
-					{Auth.loggedIn() ? (<li onClick={logout}>Logout</li>) : (<Link to="/login">Login</Link>)}
+					{Auth.loggedIn() ? (<div onClick={logout}>Logout</div>) : (<Link to="/login">Login</Link>)}
 				</li>
 			</ul>
 		</nav>
