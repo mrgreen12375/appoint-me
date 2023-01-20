@@ -6,8 +6,16 @@ function Home() {
 
 	return (
 	<main>
-		<h2 className="title"> {Auth.loggedIn() ? (<h2 className="title">Welcome, Steven</h2>) : (<h2 className="title">Please sign in</h2>)} </h2>
+
+		<h2 className="title"> 
+			{Auth.loggedIn() 
+				? (<h2 className="title">Welcome</h2>)
+				: (<h2 className="title"> </h2>)
+			} 
+		</h2>
+=======
 		<Quote></Quote>
+
 	</main>
 	);
 }
