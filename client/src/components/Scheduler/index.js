@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { CREATE_APT } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
 function Scheduler() {
   const [formState, setFormState] = useState({
@@ -12,7 +13,7 @@ function Scheduler() {
     year: "",
     time: "",
   });
-  const [addApt, { error }] = useMutation(CREATE_APT);
+  const [createAppt, { error }] = useMutation(CREATE_APT);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -25,15 +26,23 @@ function Scheduler() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      console.log("invalid token");
+      return false;
+    }
 
     try {
-      await addApt({
-        variables: { ...formState },
+      const { data } = await createAppt({
+        variables: { input: formState },
       });
+      console.log(data);
     } catch (error) {
       console.error(error);
     }
+    window.open("/appointments", "_self");
   };
   return (
     <main>
@@ -176,6 +185,7 @@ function Scheduler() {
               onChange={handleChange}
             ></textarea>
           </div>
+
           <button
             className="scheduleButton"
             style={{ cursor: "pointer" }}
