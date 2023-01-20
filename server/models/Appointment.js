@@ -9,7 +9,13 @@ const appointSchema = Schema({
     type: String,
     required: true,
   },
-  date: {
+  day: {
+    type: String,
+  },
+  month: {
+    type: String,
+  },
+  year: {
     type: String,
   },
   time: {
