@@ -2,7 +2,7 @@
   "name": "appointme",
   "version": "0.1.0",
   "private": true,
-  "proxy" : "http://localhost:3001",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^1.2.1",
     "bootstrap": "^4.4.1",
+    "cors": "^2.8.5",
     "graphql": "^15.4.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.13.1",
