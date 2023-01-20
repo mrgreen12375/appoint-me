@@ -1,31 +1,47 @@
-//import { useState, useEffect } from 'react';
-import Home from './home';
 
-// Import our search method
-import search from '../utils/API';
+import React, { useEffect, useState } from "react";
 
-//const SearchResultContainer = () => {
-
- // const [results, setResults] = useState([]);
+const query = "inspirational";
 
 
-  //const searchQuote = async (query) => {
-   // const response = await search(query);
-   // setResults(response.data.data);
- // };
 
-  // We want to run this method when the component first loads so that we have images of kittens to display
-  // The second argument is the dependency array. This means that this method will only run when the component first loads
- // useEffect(() => {
-    //searchQuote('inspirational');
- // }, []);
+function Quote() {
+  const [quote, setQuote] = useState();
+  const [author, setAuthor] = useState();
 
- // return (
-//    <div>
-  //    {/* Pass our results to the ResultsList component to map over */}
- //    <Home results={results} />
- //   </div>
- // );
-//};
+  useEffect(() => {
+    getQuoteApiData();
+  }, []);
 
-//export default SearchResultContainer;
+  const getQuoteApiData = async () => {
+    const response = fetch(
+      `https://api.api-ninjas.com/v1/quotes?category=${query}`,
+      {
+        headers: {
+          "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
+          //"Access-Control-Allow-Origin":"*",
+          //"Content-Type":"application/json"
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data[0]);
+        setQuote(data[0].quote);
+        setAuthor(data[0].author);
+      });
+  };
+
+  //render(){
+  return (
+    <div className="inspiration">
+      <h2>Inspirational Quote</h2>
+      <p className="quote">{quote}</p>
+      <p className="author">-{author}</p>
+    </div>
+  );
+  //}
+}
+
+export default Quote;
+

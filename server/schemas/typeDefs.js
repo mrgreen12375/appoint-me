@@ -12,7 +12,9 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     message: String!
-    date: String!
+    day: String!
+    month: String!
+    year: String!
     time: String!
   }
 
@@ -24,7 +26,9 @@ const typeDefs = gql`
   input setAppoint {
     name: String
     message: String
-    date: String
+    day: String
+    month: String
+    year: String
     time: String
   }
 
