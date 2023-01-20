@@ -43,18 +43,3 @@ export const CREATE_APT = gql`
   }
 `;
 
-export const GET_APTS = gql`
-  query Me($username: String!) {
-    user(username: $username) {
-      appointments {
-        _id
-        name
-        message
-        day
-        month
-        year
-        time
-      }
-    }
-  }
-`;
