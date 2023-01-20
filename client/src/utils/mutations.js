@@ -30,12 +30,13 @@ export const CREATE_APT = gql`
       _id
       username
       email
-      appointmentCount
       appointments {
         _id
         name
         message
-        date
+        day
+        month
+        year
         time
       }
     }
@@ -49,7 +50,9 @@ export const GET_APTS = gql`
         _id
         name
         message
-        date
+        day
+        month
+        year
         time
       }
     }

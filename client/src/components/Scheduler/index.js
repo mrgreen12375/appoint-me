@@ -7,7 +7,9 @@ function Scheduler() {
   const [formState, setFormState] = useState({
     name: "",
     message: "",
-    date: "",
+    day: "",
+    month: "",
+    year: "",
     time: "",
   });
   const [addApt, { error }] = useMutation(CREATE_APT);
@@ -55,12 +57,8 @@ function Scheduler() {
               className="date"
               id="month"
               name="month"
-              onChange={() => {
-                const month =
-                  document.querySelector("select[name=month]").value;
-                return month;
-                console.log(month);
-              }}
+              value={formState.month}
+              onChange={handleChange}
             >
               <option>Month</option>
               <option value="1">January</option>
@@ -80,10 +78,8 @@ function Scheduler() {
               className="date"
               id="month"
               name="day"
-              onChange={() => {
-                const day = document.querySelector("select[name=day]").value;
-                console.log(day);
-              }}
+              value={formState.day}
+              onChange={handleChange}
             >
               <option>Day</option>
               <option value="1">1</option>
@@ -122,10 +118,8 @@ function Scheduler() {
               className="date"
               id="year"
               name="year"
-              onChange={() => {
-                const year = document.querySelector("select[name=year]").value;
-                console.log(year);
-              }}
+              value={formState.year}
+              onChange={handleChange}
             >
               <option>Year</option>
               <option value="2023">2023</option>
@@ -145,30 +139,30 @@ function Scheduler() {
               onChange={handleChange}
             >
               <option>Hour</option>
-              <option value="12AM">12:00AM</option>
-              <option value="1AM">1:00AM</option>
-              <option value="2AM">2:00AM</option>
-              <option value="3AM">3:00AM</option>
-              <option value="4AM">4:00AM</option>
-              <option value="5AM">5:00AM</option>
-              <option value="6AM">6:00AM</option>
-              <option value="7AM">7:00AM</option>
-              <option value="8AM">8:00AM</option>
-              <option value="9AM">9:00AM</option>
-              <option value="10AM">10:00AM</option>
-              <option value="11AM">11:00AM</option>
-              <option value="12PM">12:00PM</option>
-              <option value="1PM">1:00PM</option>
-              <option value="2PM">2:00PM</option>
-              <option value="3PM">3:00PM</option>
-              <option value="4PM">4:00PM</option>
-              <option value="5PM">5:00PM</option>
-              <option value="6PM">6:00PM</option>
-              <option value="7PM">7:00PM</option>
-              <option value="8PM">8:00PM</option>
-              <option value="9PM">9:00PM</option>
-              <option value="10PM">10:00PM</option>
-              <option value="11PM">11:00PM</option>
+              <option value="12:00AM">12:00AM</option>
+              <option value="1:00AM">1:00AM</option>
+              <option value="2:00AM">2:00AM</option>
+              <option value="3:00AM">3:00AM</option>
+              <option value="4:00AM">4:00AM</option>
+              <option value="5:00AM">5:00AM</option>
+              <option value="6:00AM">6:00AM</option>
+              <option value="7:00AM">7:00AM</option>
+              <option value="8:00AM">8:00AM</option>
+              <option value="9:00AM">9:00AM</option>
+              <option value="10:00AM">10:00AM</option>
+              <option value="11:00AM">11:00AM</option>
+              <option value="12:00PM">12:00PM</option>
+              <option value="1:00PM">1:00PM</option>
+              <option value="2:00PM">2:00PM</option>
+              <option value="3:00PM">3:00PM</option>
+              <option value="4:00PM">4:00PM</option>
+              <option value="5:00PM">5:00PM</option>
+              <option value="6:00PM">6:00PM</option>
+              <option value="7:00PM">7:00PM</option>
+              <option value="8:00PM">8:00PM</option>
+              <option value="9:00PM">9:00PM</option>
+              <option value="10:00PM">10:00PM</option>
+              <option value="11:00PM">11:00PM</option>
             </select>
           </div>
           <div className="scheduleContainer">
