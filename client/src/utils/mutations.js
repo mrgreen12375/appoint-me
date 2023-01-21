@@ -43,3 +43,21 @@ export const CREATE_APT = gql`
   }
 `;
 
+export const DELETE_APT = gql`
+  mutation DeleteAppointment($appointId: ID!) {
+    deleteAppointment(appointID: $appointId) {
+      _id
+      username
+      email
+      appointments {
+        _id
+        name
+        message
+        day
+        month
+        year
+        time
+      }
+    }
+  }
+`;

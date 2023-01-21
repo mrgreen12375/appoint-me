@@ -67,14 +67,14 @@ const resolvers = {
         });
       }
     },
-    deleteAppointment: async (parent, { appointID }, context) => {
-      if (context.user) {
-        const appt = await User.findOneAndUpdate(
-          { _id: context.user.id },
-          { $pull: { appointments: appointID } },
+    deleteAppointment: async (parent, { id, appointID }, context) => {
+      // if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: /*context.user._id*/ id },
+          { $pull: { appointments: { _id: appointID } } },
           { new: true }
         );
-      }
+      // }
     },
   },
 };

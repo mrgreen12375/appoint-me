@@ -9,7 +9,7 @@ function Appointments() {
   return (
     <main>
       <h2 className="title">Appointments</h2>
-      {loading ? <h2>Loading...</h2> : <Card appointments={appointments} />}
+      {loading ? <h2 className="loading">Loading...</h2> : <Card appointments={appointments} />}
     </main>
   );
 }

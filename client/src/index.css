@@ -290,17 +290,33 @@ nav a:visited:hover {
   align-items: center;
 }
 
+.apptBtns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .edit {
-  position: relative;
   top: 15px;
   left: 450px;
   color: blue;
   text-decoration: none;
+  opacity: .5;
 }
 
-.edit:hover {
-  font-size: 20px;
+.delete {
+  color: red;
+  text-decoration: none;
+  margin-left: 10px;
+  opacity: .5;
 }
+
+.edit:hover, .delete:hover {
+  /* text-decoration: 2px underline; */
+  opacity: 1;
+}
+
+
 
 .appointmentCard {
   display: flex;
@@ -313,6 +329,7 @@ nav a:visited:hover {
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   padding: 0px 15px 15px 0px;
+  margin-bottom: 15px;
 }
 
 .row {
@@ -328,4 +345,9 @@ nav a:visited:hover {
 .row p {
   position: relative;
   top: 5px;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
 }
