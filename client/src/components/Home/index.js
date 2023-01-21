@@ -6,14 +6,14 @@ import { useQuery } from "@apollo/client";
 
 function Home() {
 
-  const { data } = useQuery(QUERY_ME);
+  const { loading, data } = useQuery(QUERY_ME);
   const username= data?.me.username || [];
 
   return (
     <main>
       <h2 className="title">
         {Auth.loggedIn() ? (
-          <h2 className="title">Welcome {username}</h2>
+          <h2 className="title">Welcome, {loading ? "uhhhhhhh" : username}</h2>
         ) : (
           <h2 className="title"> </h2>
         )}
