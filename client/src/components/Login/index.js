@@ -47,7 +47,6 @@ const Login = (props) => {
         <h2 className="title">Login</h2>
         {data ? (
           <p>
-            <Link to="/">back to the homepage.</Link>
           </p>
         ) : (
           <form className="scheduleForm" onSubmit={handleFormSubmit}>
