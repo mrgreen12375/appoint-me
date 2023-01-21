@@ -5,9 +5,9 @@ import { DELETE_APT } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
 function Card({ appointments }) {
-  const [deleteAppt, { error }] = useMutation(DELETE_APT);
+  const [deleteAppt] = useMutation(DELETE_APT);
   if (!appointments.length) {
-    return <h2 className = "noAppointments">No appointments yet!</h2>;
+    return <h2 className="noAppointments">No appointments yet!</h2>;
   }
   const handleDelete = async (appointID) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -18,10 +18,12 @@ function Card({ appointments }) {
     }
 
     try {
-      await deleteAppt({ variables: { appointID } });
+      console.log(appointID);
+      await deleteAppt({ variables: { appointId: appointID } });
     } catch (error) {
       console.error(error);
     }
+    window.open("/appointments", "_self");
   };
   return (
     <div className="center">
@@ -31,7 +33,7 @@ function Card({ appointments }) {
             <Link className="edit" to="/update">
               Edit
             </Link>
-            <div className = "split">
+            <div className="split">
               <Link
                 className="delete"
                 to="/appointments"
