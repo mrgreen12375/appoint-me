@@ -43,7 +43,7 @@ const typeDefs = gql`
     removeUser(email: String!, password: String!): User
     createAppointment(input: setAppoint!): User
     updateAppointment(appointID: ID!): User
-    deleteAppointment(appointID: ID!, id: String!): User
+    deleteAppointment(appointID: ID!): User
   }
 `;
 

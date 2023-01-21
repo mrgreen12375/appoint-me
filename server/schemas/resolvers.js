@@ -67,14 +67,15 @@ const resolvers = {
         });
       }
     },
-    deleteAppointment: async (parent, { id, appointID }, context) => {
-      // if (context.user) {
+    deleteAppointment: async (parent, { appointID }, context) => {
+      if (context.user) {
         return User.findOneAndUpdate(
-          { _id: /*context.user._id*/ id },
+          { _id: context.user._id },
           { $pull: { appointments: { _id: appointID } } },
           { new: true }
         );
-      // }
+      }
+      throw new AuthenticationError("Couldnt get context.user!");
     },
   },
 };
