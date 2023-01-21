@@ -373,3 +373,8 @@ nav a:visited:hover {
   position: relative;
   left: 5px;
 }
+
+.symbol {
+  position: relative;
+  right: 6px;
+}

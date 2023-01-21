@@ -6,7 +6,7 @@ function Header() {
 	return (
 		<header>
 			<div className = "appointMe">
-				<h1>Appoint</h1><h1 className = "me">Me!</h1>
+				<h1>Appoint</h1><h1 className = "me">Me</h1><h1 className = "symbol">!</h1>
 			</div>
 			<div>
 				<Nav></Nav>
