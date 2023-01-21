@@ -1,12 +1,13 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import Quote from "../Quote";
-import { useQuery } from "@apollo/client";
+
 import { QUERY_ME } from "../../utils/queries";
+import { useQuery } from "@apollo/client";
 
 function Home() {
   const { loading, data } = useQuery(QUERY_ME);
-  const username = data?.me.username || [];
+  const username= data?.me.username || [];
   return (
     <main>
       <h2 className="title">
