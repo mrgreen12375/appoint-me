@@ -41,7 +41,6 @@ const Signup = () => {
         <h2 className="title">Sign-up</h2>
         {data ? (
           <p>
-            <Link to="/">back to the homepage.</Link>
           </p>
         ) : (
           <form className="scheduleForm" onSubmit={handleFormSubmit}>

@@ -184,9 +184,9 @@ function Scheduler() {
               onChange={handleChange}
             ></textarea>
           </div>
-
+          <div className = "loginForm">
           <button
-            className="scheduleButton"
+            className="loginButton"
             style={{ cursor: "pointer" }}
             type="submit"
           >
@@ -194,6 +194,7 @@ function Scheduler() {
             Schedule
             {/* </Link> */}
           </button>
+          </div>
         </div>
       </form>
       {error && <div>{error.message}</div>}

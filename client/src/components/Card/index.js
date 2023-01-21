@@ -7,7 +7,7 @@ import Auth from "../../utils/auth";
 function Card({ appointments }) {
   const [deleteAppt, { error }] = useMutation(DELETE_APT);
   if (!appointments.length) {
-    return <h2>No appointments yet!</h2>;
+    return <h2 className = "noAppointments">No appointments yet!</h2>;
   }
   const handleDelete = async (appointID) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -31,13 +31,15 @@ function Card({ appointments }) {
             <Link className="edit" to="/update">
               Edit
             </Link>
-            <Link
-              className="delete"
-              to="/appointments"
-              onClick={() => handleDelete(appointment._id)}
-            >
-              Delete
-            </Link>
+            <div className = "split">
+              <Link
+                className="delete"
+                to="/appointments"
+                onClick={() => handleDelete(appointment._id)}
+              >
+                Delete
+              </Link>
+            </div>
           </div>
           <div className="row">
             <h3>Name:</h3>

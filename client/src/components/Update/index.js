@@ -107,7 +107,6 @@ function Update() {
                     <textarea className="messageInput" type="text" name="messageField" id="message-input"></textarea>
                 </div>
                 <Link className="scheduleButton" to="/appointments">Update</Link>
-                <Link className="scheduleButton" to="/appointments">Delete</Link>
             </div>
         </form>
     </main>
