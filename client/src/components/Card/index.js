@@ -30,7 +30,7 @@ function Card({ appointments }) {
       {appointments.map((appointment) => (
         <div className="appointmentCard" key={appointment._id}>
           <div className="apptBtns">
-            <Link className="edit" to="/update">
+            <Link className="edit" to="/update" state={appointment}>
               Edit
             </Link>
             <div className="split">
