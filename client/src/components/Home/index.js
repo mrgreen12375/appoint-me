@@ -11,7 +11,7 @@ function Home() {
     <main>
       <h2 className="title">
         {Auth.loggedIn() ? (
-          <h2 className="title">Welcome, {loading ? "uhhhh" : username}</h2>
+          <h2 className="title">Welcome, {loading ? "" : username}</h2>
         ) : (
           <h2 className="title"> </h2>
         )}

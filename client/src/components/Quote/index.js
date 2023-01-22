@@ -29,7 +29,6 @@ function Quote() {
 
   return (
     <div className="inspiration">
-      <h2>Inspirational Quote</h2>
       <p className="quote">{quote}</p>
       <p className="author">-{author}</p>
     </div>
