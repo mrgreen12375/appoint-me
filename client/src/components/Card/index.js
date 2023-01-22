@@ -23,7 +23,7 @@ function Card({ appointments }) {
     } catch (error) {
       console.error(error);
     }
-    window.open("/appointments", "_self");
+    window.location.assign("/appointments");
   };
   return (
     <div className="center">

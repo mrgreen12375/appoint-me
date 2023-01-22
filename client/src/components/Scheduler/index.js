@@ -41,7 +41,7 @@ function Scheduler() {
     } catch (error) {
       console.error(error);
     }
-    window.open("/appointments", "_self");
+    window.location.assign("/appointments");
   };
   return (
     <main>
