@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 
 const query = "inspirational";
 
-
-
 function Quote() {
   const [quote, setQuote] = useState();
   const [author, setAuthor] = useState();
@@ -18,8 +16,6 @@ function Quote() {
       {
         headers: {
           "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
-          //"Access-Control-Allow-Origin":"*",
-          //"Content-Type":"application/json"
         },
       }
     )
@@ -31,7 +27,6 @@ function Quote() {
       });
   };
 
-  //render(){
   return (
     <div className="inspiration">
       <h2>Inspirational Quote</h2>
@@ -39,7 +34,6 @@ function Quote() {
       <p className="author">-{author}</p>
     </div>
   );
-  //}
 }
 
 export default Quote;
