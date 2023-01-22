@@ -92,7 +92,7 @@ const Signup = () => {
             </div>
           </form>
         )}
-        {error && <div>{error.message}</div>}
+        {error && <div className = "loading">{error.message}</div>}
       </div>
     </main>
   );

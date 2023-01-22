@@ -185,19 +185,17 @@ function Scheduler() {
             ></textarea>
           </div>
           <div className = "loginForm">
-          <button
-            className="loginButton"
-            style={{ cursor: "pointer" }}
-            type="submit"
-          >
-            {/* <Link  to="/appointments"> */}
-            Schedule
-            {/* </Link> */}
-          </button>
-          </div>
+            <button
+              className="loginButton"
+              style={{ cursor: "pointer" }}
+              type="submit"
+            >
+              Schedule
+            </button>
+            </div>
         </div>
       </form>
-      {error && <div>{error.message}</div>}
+      {error && <div className="loading">{error.message}</div>}
     </main>
   );
 }

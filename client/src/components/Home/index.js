@@ -1,7 +1,6 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import Quote from "../Quote";
-
 import { QUERY_ME } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
 

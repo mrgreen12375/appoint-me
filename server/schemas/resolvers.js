@@ -30,7 +30,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
-        throw new AuthenticationError("User not found");
+        throw new AuthenticationError("User not found!");
       }
       const correctpw = await user.isCorrectPassword(password);
       if (!correctpw) {
