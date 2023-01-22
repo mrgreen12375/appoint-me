@@ -45,11 +45,29 @@ THEN all of the cards information is deleted and is no longer displayed on the h
 ```
 
 ## Screenshots
+![AppointMe! login](./client/src/assets/images/appoint-me.herokuapp.com%3Asignup_.png)
+
+![AppointMe! welcome screen](./client/src/assets/images/appoint-me.herokuapp.com_.png)
+
+![AppointMe! scheduler](./client/src/assets/images/appoint-me.herokuapp.com%3Ascheduler_.png)
+
+![AppointMe! appointments](./client/src/assets/images/appoint-me.herokuapp.com%3Aappointments_.png)
 
 ## Usage
+Creating and managing appointments with the AppointMe! app is easy and intuitive. Simply open the application and sign in or sign up using the Login tab. Signing in for the first time requires a unique user name, email, and password. Those are saved and future sign ins only require username and password. The user is redirected to the home tab upon signing in and can now view any upcoming appointments as well as schedule new ones with the appointments and scheduler tabs. Existing appointments can be edited or deleted in the appointments tab.
 
 ## Plans for Future Development
+- Further personalize the user homepage by adding their next upcoming appointment.
+- Make AppointMe! available offline as a progressive web application so that users may view and create appointments any time.
+- Add feature to send appointment cards to the users email if requested.
+- Organize scheduled appointments by month.
+- Give users the ability to export appointment cards to a calender of their choice like google calender or ical.
 
 ## Deployment Links
+[Heroku](https://appoint-me.herokuapp.com/)
 
 ## Contact
+[Green](https://github.com/mrgreen12375)
+[Landy](https://github.com/Landycodes)
+[Yari](https://github.com/FixieGemini)
+[Zak](https://github.com/taylorzak)
