@@ -45,13 +45,13 @@ THEN all of the cards information is deleted and is no longer displayed on the h
 ```
 
 ## Screenshots
-![AppointMe! login](./client/src/assets/images/appoint-me.herokuapp.com%3Asignup_.png)
+![AppointMe! login](./client/src/assets/images/signup.png)
 
-![AppointMe! welcome screen](./client/src/assets/images/appoint-me.herokuapp.com_.png)
+![AppointMe! welcome screen](./client/src/assets/images/welcome.png)
 
-![AppointMe! scheduler](./client/src/assets/images/appoint-me.herokuapp.com%3Ascheduler_.png)
+![AppointMe! scheduler](./client/src/assets/images/scheduler.png)
 
-![AppointMe! appointments](./client/src/assets/images/appoint-me.herokuapp.com%3Aappointments_.png)
+![AppointMe! appointments](./client/src/assets/images/appointments.png)
 
 ## Usage
 Creating and managing appointments with the AppointMe! app is easy and intuitive. Simply open the application and sign in or sign up using the Login tab. Signing in for the first time requires a unique user name, email, and password. Those are saved and future sign ins only require username and password. The user is redirected to the home tab upon signing in and can now view any upcoming appointments as well as schedule new ones with the appointments and scheduler tabs. Existing appointments can be edited or deleted in the appointments tab.
