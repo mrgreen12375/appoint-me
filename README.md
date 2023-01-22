@@ -67,7 +67,7 @@ Creating and managing appointments with the AppointMe! app is easy and intuitive
 [Heroku](https://appoint-me.herokuapp.com/)
 
 ## Contact
-[Green](https://github.com/mrgreen12375)
-[Landy](https://github.com/Landycodes)
-[Yari](https://github.com/FixieGemini)
-[Zak](https://github.com/taylorzak)
+- [Green](https://github.com/mrgreen12375)
+- [Landy](https://github.com/Landycodes)
+- [Yari](https://github.com/FixieGemini)
+- [Zak](https://github.com/taylorzak)
