@@ -217,6 +217,7 @@ nav a:visited:hover {
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   margin-right: 5px;
+  background-color: white;
 }
 
 .label {
