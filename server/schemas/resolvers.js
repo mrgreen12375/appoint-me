@@ -68,9 +68,6 @@ const resolvers = {
     },
     updateAppointment: async (parent, { appointID, input }, context) => {
       if (context.user) {
-        // console.log(`user_id: ${userID}`);
-        // console.log(`appointment_id: ${appointID}`);
-        // console.log(input.name);
         return await User.findOneAndUpdate(
           {
             _id: context.user._id,
@@ -105,4 +102,3 @@ const resolvers = {
 };
 
 module.exports = resolvers;
-//cant figure out how to incorporate context in apollo server sandbox
