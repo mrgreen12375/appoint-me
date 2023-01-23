@@ -11,6 +11,7 @@ function Quote() {
   }, []);
 
   const getQuoteApiData = async () => {
+<<<<<<< HEAD
     fetch(`https://api.api-ninjas.com/v1/quotes?category=${query}`, {
       headers: {
         "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
@@ -18,6 +19,15 @@ function Quote() {
         //"Content-Type":"application/json"
       },
     })
+=======
+      fetch(`https://api.api-ninjas.com/v1/quotes?category=${query}`,
+      {
+        headers: {
+          "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
+        },
+      }
+    )
+>>>>>>> e6a19f9fdf6d9ceabb7bb6d479155e0b1bd9a480
       .then((response) => response.json())
       .then((data) => {
         // console.log(data[0]);
@@ -26,15 +36,12 @@ function Quote() {
       });
   };
 
-  //render(){
   return (
     <div className="inspiration">
-      <h2>Inspirational Quote</h2>
       <p className="quote">{quote}</p>
       <p className="author">-{author}</p>
     </div>
   );
-  //}
 }
 
 export default Quote;

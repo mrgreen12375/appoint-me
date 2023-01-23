@@ -41,7 +41,7 @@ function Scheduler() {
     } catch (error) {
       console.error(error);
     }
-    window.open("/appointments", "_self");
+    window.location.assign("/");
   };
   return (
     <main>
@@ -195,7 +195,7 @@ function Scheduler() {
           </div>
         </div>
       </form>
-      {error && <div>{error.message}</div>}
+      {error && <div className="loading">{error.message}</div>}
     </main>
   );
 }
