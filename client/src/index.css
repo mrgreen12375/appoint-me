@@ -370,6 +370,11 @@ nav a:visited:hover {
 
 @media screen and (max-width: 799px) {
 
+  html {
+    background-image: url("./assets/images/wrinkeld-paper.jpg");
+    background-size: auto;
+  }
+
 	nav ul {
 		display: flex;
 		flex-direction: column;
@@ -393,7 +398,7 @@ nav a:visited:hover {
   }
 
   .appointmentCard {
-    width: 400px;
+    width: 380px;
   }
 
 }
