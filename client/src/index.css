@@ -149,6 +149,7 @@ nav a:visited:hover {
 }
 
 .loginButton {
+  width: 100%;
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
@@ -366,6 +367,7 @@ nav a:visited:hover {
   right: 6px;
 }
 
+
 @media screen and (max-width: 799px) {
 
 	nav ul {
@@ -391,3 +393,17 @@ nav a:visited:hover {
   }
 
 }
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.551);
+	border-radius: 4px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.488);
+	background-color: rgba(19, 19, 19, 0.793);}
