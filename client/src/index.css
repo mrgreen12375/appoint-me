@@ -392,6 +392,10 @@ nav a:visited:hover {
     padding: 6px 75px 6px 10px;
   }
 
+  .appointmentCard {
+    width: 400px;
+  }
+
 }
 /* custom scrollbar */
 ::-webkit-scrollbar {

@@ -41,7 +41,7 @@ function Update() {
     } catch (error) {
       console.error(error);
     }
-    window.open("/appointments", "_self");
+    window.location.assign("/");
   };
   return (
     <main>
