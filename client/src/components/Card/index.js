@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { DELETE_APT } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 function Card({ appointments }) {
+  const navigate = useNavigate();
+
   const [deleteAppt] = useMutation(DELETE_APT);
   if (!appointments.length) {
     return <h2 className="noAppointments">No appointments yet!</h2>;
@@ -23,7 +26,7 @@ function Card({ appointments }) {
     } catch (error) {
       console.error(error);
     }
-    window.location.reload();
+    navigate("/appointments");
   };
   return (
     <div className="center">
