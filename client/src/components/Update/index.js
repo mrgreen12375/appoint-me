@@ -186,7 +186,7 @@ function Update() {
           </div>
           <button
             className="loginButton"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", marginBottom: "20px" }}
             type="submit"
           >
             Update

@@ -187,7 +187,7 @@ function Scheduler() {
           <div className="loginForm">
             <button
               className="loginButton"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", marginBottom: "20px" }}
               type="submit"
             >
               Schedule
