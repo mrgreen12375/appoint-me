@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { UPDATE_APT } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
 function Update() {
   const props = useLocation().state;
+  const navigate = useNavigate();
   const [formState, setFormState] = useState({
     name: props.name,
     message: props.message,
@@ -41,7 +42,7 @@ function Update() {
     } catch (error) {
       console.error(error);
     }
-    window.open("/appointments", "_self");
+    navigate("/appointments");
   };
   return (
     <main>

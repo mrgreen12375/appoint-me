@@ -23,7 +23,7 @@ function Card({ appointments }) {
     } catch (error) {
       console.error(error);
     }
-    window.location.assign("/");
+    window.location.reload();
   };
   return (
     <div className="center">
