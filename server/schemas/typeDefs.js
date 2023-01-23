@@ -36,13 +36,14 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
+    appt(meid: ID, appointID: ID): User
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     removeUser(email: String!, password: String!): User
     createAppointment(input: setAppoint!): User
-    updateAppointment(appointID: ID!): User
+    updateAppointment(appointID: ID, input: setAppoint): User
     deleteAppointment(appointID: ID!): User
   }
 `;

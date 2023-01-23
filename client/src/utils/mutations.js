@@ -61,3 +61,22 @@ export const DELETE_APT = gql`
     }
   }
 `;
+
+export const UPDATE_APT = gql`
+mutation UpdateAppointment($input: setAppoint, $appointId: ID) {
+  updateAppointment(input: $input, appointID: $appointId) {
+    _id
+    username
+    email
+    appointments {
+      _id
+      name
+      message
+      day
+      month
+      year
+      time
+    }
+  }
+}
+`

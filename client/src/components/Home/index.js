@@ -7,16 +7,16 @@ import { useQuery } from "@apollo/client";
 
 function Home() {
   const { loading, data } = useQuery(QUERY_ME);
-  const username= data?.me.username || [];
+  const username = data?.me.username || [];
   return (
     <main>
-      <h2 className="title">
+      <div className="title">
         {Auth.loggedIn() ? (
-          <h2 className="title">Welcome, {loading ? "uhhhh" : username}</h2>
+          <h1 className="title">Welcome, {loading ? "uhhhh" : username}</h1>
         ) : (
           <h2 className="title"> </h2>
         )}
-      </h2>
+      </div>
       <Quote></Quote>
     </main>
   );

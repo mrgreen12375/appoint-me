@@ -1,9 +1,6 @@
-
 import React, { useEffect, useState } from "react";
 
 const query = "inspirational";
-
-
 
 function Quote() {
   const [quote, setQuote] = useState();
@@ -14,18 +11,16 @@ function Quote() {
   }, []);
 
   const getQuoteApiData = async () => {
-      fetch(`https://api.api-ninjas.com/v1/quotes?category=${query}`,
-      {
-        headers: {
-          "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
-          //"Access-Control-Allow-Origin":"*",
-          //"Content-Type":"application/json"
-        },
-      }
-    )
+    fetch(`https://api.api-ninjas.com/v1/quotes?category=${query}`, {
+      headers: {
+        "X-Api-Key": "yCMvFpxTzoD1YpyLGRHvfg==uQKwGLSO5PxwmmxN",
+        //"Access-Control-Allow-Origin":"*",
+        //"Content-Type":"application/json"
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data[0]);
+        // console.log(data[0]);
         setQuote(data[0].quote);
         setAuthor(data[0].author);
       });
@@ -43,4 +38,3 @@ function Quote() {
 }
 
 export default Quote;
-

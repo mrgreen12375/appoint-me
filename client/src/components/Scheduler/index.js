@@ -184,16 +184,14 @@ function Scheduler() {
               onChange={handleChange}
             ></textarea>
           </div>
-          <div className = "loginForm">
-          <button
-            className="loginButton"
-            style={{ cursor: "pointer" }}
-            type="submit"
-          >
-            {/* <Link  to="/appointments"> */}
-            Schedule
-            {/* </Link> */}
-          </button>
+          <div className="loginForm">
+            <button
+              className="loginButton"
+              style={{ cursor: "pointer" }}
+              type="submit"
+            >
+              Schedule
+            </button>
           </div>
         </div>
       </form>

@@ -1,13 +1,52 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { UPDATE_APT } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
 function Update() {
   const props = useLocation().state;
+  const [formState, setFormState] = useState({
+    name: props.name,
+    message: props.message,
+    day: props.day,
+    month: props.month,
+    year: props.year,
+    time: props.time,
+  });
+  const [updateAppt] = useMutation(UPDATE_APT);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      console.log("invalid token");
+      return false;
+    }
+
+    try {
+      await updateAppt({
+        variables: { appointId: props._id, input: formState },
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    window.open("/appointments", "_self");
+  };
   return (
     <main>
       <h2 className="title">Appointment</h2>
-      <form className="scheduleForm">
+      <form className="scheduleForm" onSubmit={handleFormSubmit}>
         <div className="allignForm">
           <div className="scheduleContainer">
             <div className="scheduleContainer">
@@ -15,14 +54,21 @@ function Update() {
               <input
                 className="nameInput"
                 type="text"
-                name="nameField"
+                name="name"
                 id="name-input"
                 defaultValue={props.name}
+                onChange={handleChange}
               />
             </div>
             <label className="label">Date:</label>
-            <select className="date" id="month" defaultValue={props.month}>
-              <option value="0">Month</option>
+            <select
+              className="date"
+              id="month"
+              name="month"
+              defaultValue={props.month}
+              onChange={handleChange}
+            >
+              <option>Month</option>
               <option value="1">January</option>
               <option value="2">February</option>
               <option value="3">March</option>
@@ -36,8 +82,14 @@ function Update() {
               <option value="11">November</option>
               <option value="12">December</option>
             </select>
-            <select className="date" id="month" defaultValue={props.day}>
-              <option value="0">Day</option>
+            <select
+              className="date"
+              id="month"
+              name="day"
+              defaultValue={props.day}
+              onChange={handleChange}
+            >
+              <option>Day</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -70,8 +122,14 @@ function Update() {
               <option value="30">30</option>
               <option value="31">31</option>
             </select>
-            <select className="date" id="year" defaultValue={props.year}>
-              <option value="0">Year</option>
+            <select
+              className="date"
+              id="year"
+              name="year"
+              defaultValue={props.year}
+              onChange={handleChange}
+            >
+              <option>Year</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
               <option value="2025">2025</option>
@@ -81,32 +139,38 @@ function Update() {
           </div>
           <div className="scheduleContainer">
             <label className="label">Time:</label>
-            <select className="date" id="hour" defaultValue={props.time}>
-              <option value="0">Hour</option>
-              <option value="1">12:00AM</option>
-              <option value="2">1:00AM</option>
-              <option value="3">2:00AM</option>
-              <option value="4">3:00AM</option>
-              <option value="5">4:00AM</option>
-              <option value="6">5:00AM</option>
-              <option value="7">6:00AM</option>
-              <option value="8">7:00AM</option>
-              <option value="9">8:00AM</option>
-              <option value="10">9:00AM</option>
-              <option value="11">10:00AM</option>
-              <option value="12">11:00AM</option>
-              <option value="13">12:00PM</option>
-              <option value="14">1:00PM</option>
-              <option value="15">2:00PM</option>
-              <option value="16">3:00PM</option>
-              <option value="17">4:00PM</option>
-              <option value="18">5:00PM</option>
-              <option value="19">6:00PM</option>
-              <option value="20">7:00PM</option>
-              <option value="21">8:00PM</option>
-              <option value="22">9:00PM</option>
-              <option value="23">10:00PM</option>
-              <option value="24">11:00PM</option>
+            <select
+              className="date"
+              id="hour"
+              name="time"
+              defaultValue={props.time}
+              onChange={handleChange}
+            >
+              <option>Hour</option>
+              <option value="12:00AM">12:00AM</option>
+              <option value="1:00AM">1:00AM</option>
+              <option value="2:00AM">2:00AM</option>
+              <option value="3:00AM">3:00AM</option>
+              <option value="4:00AM">4:00AM</option>
+              <option value="5:00AM">5:00AM</option>
+              <option value="6:00AM">6:00AM</option>
+              <option value="7:00AM">7:00AM</option>
+              <option value="8:00AM">8:00AM</option>
+              <option value="9:00AM">9:00AM</option>
+              <option value="10:00AM">10:00AM</option>
+              <option value="11:00AM">11:00AM</option>
+              <option value="12:00PM">12:00PM</option>
+              <option value="1:00PM">1:00PM</option>
+              <option value="2:00PM">2:00PM</option>
+              <option value="3:00PM">3:00PM</option>
+              <option value="4:00PM">4:00PM</option>
+              <option value="5:00PM">5:00PM</option>
+              <option value="6:00PM">6:00PM</option>
+              <option value="7:00PM">7:00PM</option>
+              <option value="8:00PM">8:00PM</option>
+              <option value="9:00PM">9:00PM</option>
+              <option value="10:00PM">10:00PM</option>
+              <option value="11:00PM">11:00PM</option>
             </select>
           </div>
           <div className="scheduleContainer">
@@ -114,14 +178,19 @@ function Update() {
             <textarea
               className="messageInput"
               type="text"
-              name="messageField"
+              name="message"
               id="message-input"
               defaultValue={props.message}
+              onChange={handleChange}
             ></textarea>
           </div>
-          <Link className="scheduleButton" to="/appointments">
+          <button
+            className="loginButton"
+            style={{ cursor: "pointer" }}
+            type="submit"
+          >
             Update
-          </Link>
+          </button>
         </div>
       </form>
     </main>
