@@ -372,7 +372,8 @@ nav a:visited:hover {
 
   html {
     background-image: url("./assets/images/wrinkeld-paper.jpg");
-    background-size: auto;
+    height: 100%;
+    width: 100%;
   }
 
 	nav ul {
