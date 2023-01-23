@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { CREATE_APT } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 function Scheduler() {
+  const navigate = useNavigate();
+
   const [formState, setFormState] = useState({
     name: "",
     message: "",
@@ -34,14 +37,13 @@ function Scheduler() {
     }
 
     try {
-      const { data } = await createAppt({
+      await createAppt({
         variables: { input: formState },
       });
-      console.log(data);
     } catch (error) {
       console.error(error);
     }
-    window.location.assign("/");
+    navigate("/appointments");
   };
   return (
     <main>
