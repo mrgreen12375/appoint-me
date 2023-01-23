@@ -11,11 +11,7 @@ function Home() {
     <main>
       <div className="title">
         {Auth.loggedIn() ? (
-<<<<<<< HEAD
           <h1 className="title">Welcome, {loading ? "uhhhh" : username}</h1>
-=======
-          <h2 className="title">Welcome, {loading ? "" : username}</h2>
->>>>>>> e6a19f9fdf6d9ceabb7bb6d479155e0b1bd9a480
         ) : (
           <h2 className="title"> </h2>
         )}
