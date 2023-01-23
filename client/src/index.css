@@ -254,6 +254,12 @@ nav a:visited:hover {
   margin-left: 35px;
 }
 
+.passwordInput {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 6px 110px 6px 10px;
+}
+
 .messageLabel {
   font-size: 20px;
   font-weight: bold;
@@ -265,26 +271,6 @@ nav a:visited:hover {
   border: 2px solid black;
   border-radius: 5px;
   padding: 6px 70px 50px 10px;
-}
-
-.scheduleButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: white;
-  background-color: blue;
-  font-size: 22px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 5px 0px;
-  margin: 5px;
-}
-
-.scheduleButton:hover {
-  background-color: rgb(45, 45, 255);
 }
 
 .center {
@@ -381,6 +367,41 @@ nav a:visited:hover {
   right: 6px;
 }
 
+
+@media screen and (max-width: 799px) {
+
+  html {
+    background-image: url("./assets/images/wrinkeld-paper.jpg");
+    background-size: auto;
+  }
+
+	nav ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+  nav li {
+    text-align: center;
+	}
+
+  .quote {
+    font-size: 20px;
+    margin: 0px 30px 0px 40px;
+  }
+
+  .emailInput {
+    padding: 6px 75px 6px 10px;
+  }
+
+  .passwordInput {
+    padding: 6px 75px 6px 10px;
+  }
+
+  .appointmentCard {
+    width: 380px;
+  }
+
+}
 /* custom scrollbar */
 ::-webkit-scrollbar {
 	width: 10px;

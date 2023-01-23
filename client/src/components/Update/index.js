@@ -185,13 +185,15 @@ function Update() {
               onChange={handleChange}
             ></textarea>
           </div>
-          <button
-            className="loginButton"
-            style={{ cursor: "pointer", marginBottom: "20px" }}
-            type="submit"
-          >
-            Update
-          </button>
+          <div className="loginForm">
+            <button
+              className="loginButton"
+              style={{ cursor: "pointer", marginBottom: "20px" }}
+              type="submit"
+            >
+              Update
+            </button>
+          </div>
         </div>
       </form>
     </main>
