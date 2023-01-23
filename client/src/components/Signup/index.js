@@ -48,7 +48,7 @@ const Signup = () => {
               <div className="scheduleContainer">
                 <label className="userLabel">Username:</label>
                 <input
-                  className="nameInput"
+                  className="passwordInput"
                   name="username"
                   type="text"
                   value={formState.username}
@@ -69,7 +69,7 @@ const Signup = () => {
                 <div className="scheduleContainer">
                   <label className="nameLabel">Password:</label>
                   <input
-                    className="nameInput"
+                    className="passwordInput"
                     name="password"
                     type="password"
                     value={formState.password}
