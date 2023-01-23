@@ -184,7 +184,7 @@ function Scheduler() {
               onChange={handleChange}
             ></textarea>
           </div>
-          <div className = "loginForm">
+          <div className="loginForm">
             <button
               className="loginButton"
               style={{ cursor: "pointer" }}
@@ -192,7 +192,7 @@ function Scheduler() {
             >
               Schedule
             </button>
-            </div>
+          </div>
         </div>
       </form>
       {error && <div className="loading">{error.message}</div>}
