@@ -44,6 +44,7 @@ function Scheduler() {
       console.error(error);
     }
     navigate("/appointments");
+    window.location.reload();
   };
   return (
     <main>
