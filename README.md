@@ -2,12 +2,12 @@
 
 ### Table of Contents
 - [Description](#Description)
-- [User Story & Acceptance Criteria](#User_Story_&_Acceptance_Criteria)
 - [Technology](#Technology)
+- [User Story & Acceptance Criteria](#Description)
 - [Screenshots](#Screenshots)
 - [Usage](#Usage)
-- [Plans for Future Development](#Plans_for_Future_Development)
-- [Deployment Links](#Deployment_Links)
+- [Plans for Future Development](#Usage)
+- [Deployment Links](#Usage)
 - [Contact](#Contact)
 
 ## Description
@@ -74,6 +74,8 @@ Creating and managing appointments with the AppointMe! app is easy and intuitive
 
 ## Deployment Links
 [Heroku](https://appoint-me.herokuapp.com/)
+
+[GitHub](https://appoint-me.herokuapp.com/)
 
 ## Contact
 - [Green](https://github.com/mrgreen12375)
