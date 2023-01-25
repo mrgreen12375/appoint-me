@@ -2,6 +2,7 @@
 
 ### Table of Contents
 - [Description](#Description)
+- [Technology](#Technology)
 - [User Story & Acceptance Criteria](#Description)
 - [Screenshots](#Screenshots)
 - [Usage](#Usage)
@@ -43,6 +44,14 @@ THEN the card on my homepage is updated with the new information that I entered
 WHEN I click the delete button in the card
 THEN all of the cards information is deleted and is no longer displayed on the homepage
 ```
+
+## Technology
+- mongoDB & mongoose
+- React.js
+- express.js
+- Apollo & graphQL
+- Ninja API
+- VScode, GitHub, Heroku
 
 ## Screenshots
 ![AppointMe! login](./client/src/assets/images/signup.png)

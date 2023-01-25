@@ -10,11 +10,10 @@ function Home() {
   return (
     <main>
       <div className="title">
-        {Auth.loggedIn() ? (
-          <h1 className="title">Welcome, {loading ? "" : username}</h1>
-        ) : (
-          <h2 className="title"> </h2>
-        )}
+        {Auth.loggedIn() 
+          ? (<h1 className="title">Welcome, {loading ? "" : username}</h1>) 
+          : (<h2 className="title"> </h2>)
+        }
       </div>
       <Quote></Quote>
     </main>
