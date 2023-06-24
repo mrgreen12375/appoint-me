@@ -392,11 +392,15 @@ nav a:visited:hover {
   }
 
   .emailInput {
-    padding: 6px 75px 6px 10px;
+    padding: 6px 40px 6px 10px;
   }
 
   .passwordInput {
-    padding: 6px 75px 6px 10px;
+    padding: 6px 40px 6px 10px;
+  }
+
+  .nameInput {
+    padding: 6px 95px 6px 10px;
   }
 
   .appointmentCard {
